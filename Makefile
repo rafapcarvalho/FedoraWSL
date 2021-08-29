@@ -3,7 +3,7 @@ LNCR_EXE=Fedora33.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21020500/icons.zip
+LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21082800/icons.zip
 LNCR_ZIP_EXE=Fedora.exe
 
 all: $(OUT_ZIP)
@@ -43,7 +43,7 @@ rootfs: base.tar
 
 base.tar:
 	@echo -e '\e[1;31mExporting base.tar using docker...\e[m'
-	docker run --name fedorawsl library/fedora@sha256:01d5ac0cd63f7890b64f6e829cfec530d22dfd228d3fccc5437d20198bddfceb /bin/bash -c "dnf update -y; rpm -e --nodeps sudo; dnf clean all; pwconv; grpconv; chmod 0744 /etc/shadow; chmod 0744 /etc/gshadow;"
+	docker run --name fedorawsl library/fedora@sha256:13b0c29e03c6e67da66e95b3ee6be1778185247dd17a9635202847a7f6878492 /bin/bash -c "dnf update -y; rpm -e --nodeps sudo; dnf clean all; pwconv; grpconv; chmod 0744 /etc/shadow; chmod 0744 /etc/gshadow;"
 	docker export --output=base.tar fedorawsl
 	docker rm -f fedorawsl
 
@@ -56,4 +56,4 @@ clean:
 	-rm rootfs.tar.gz
 	-sudo rm -r rootfs
 	-rm base.tar
-	-docker rmi library/fedora@sha256:01d5ac0cd63f7890b64f6e829cfec530d22dfd228d3fccc5437d20198bddfceb
+	-docker rmi library/fedora@sha256:13b0c29e03c6e67da66e95b3ee6be1778185247dd17a9635202847a7f6878492
