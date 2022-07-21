@@ -2,7 +2,7 @@
 Fedora on WSL (Windows 10 FCU or later)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
-![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL/master/img/screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/50453594/180303412-e0cb40aa-1963-4f41-aa9a-f0456be9b5ab.png)
 
 [![CircleCI](https://circleci.com/gh/yosukes-dev/FedoraWSL.svg?style=svg)](https://circleci.com/gh/yosukes-dev/FedoraWSL2)
 [![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL/releases)
